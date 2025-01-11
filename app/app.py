@@ -39,7 +39,7 @@ if uploaded_file:
     st.dataframe(data)
 
     st.markdown("### Download Predictions:")
-    csv = data.to_csv(index=False).encode('utf-8')
+    csv = data.to_csv(index = False).encode('utf-8')
     st.download_button("Download CSV", csv, "predictions.csv", "text/csv")
 
 st.sidebar.header("Manual Input")
@@ -48,13 +48,13 @@ st.sidebar.markdown("Provide customer details to predict churn:")
 geography           = st.sidebar.selectbox("Geography", ['France', 'Spain', 'Germany'])
 gender              = st.sidebar.radio("Customer Gender", ['Male', 'Female'])
 age                 = st.sidebar.slider("Customer Age", min_value = 18, max_value = 90, step = 1)
-credit_score        = st.sidebar.number_input("Credit Score", min_value=300, max_value=1000, step=1)
-tenure              = st.sidebar.number_input("Tenure (Years)", min_value=0, max_value=10, step=1)
-balance             = st.sidebar.number_input("Balance", min_value=0.0, max_value=250000.0, step=0.01)
+credit_score        = st.sidebar.number_input("Credit Score", min_value = 300, max_value = 1000, step = 1)
+tenure              = st.sidebar.number_input("Tenure (Years)", min_value = 0, max_value = 10, step = 1)
+balance             = st.sidebar.number_input("Balance", min_value = 0.0, max_value = 250000.0, step = 0.01)
 num_of_products     = st.sidebar.selectbox("Number of Products", [1, 2, 3, 4])
 has_card            = st.sidebar.radio("Has Credit Card?", ['Yes', 'No'])
 is_active           = st.sidebar.radio("Is Active Member?", ['Yes', 'No'])
-estimated_salary    = st.sidebar.number_input("Estimated Salary", min_value=0.0, max_value=200000.0, step=0.01)
+estimated_salary    = st.sidebar.number_input("Estimated Salary", min_value = 0.0, max_value = 200000.0, step = 0.01)
 
 if st.sidebar.button("Predict"):
     input_data = pd.DataFrame([[
