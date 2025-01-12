@@ -3,7 +3,7 @@
 Predict customer churn in a bank **`Classic Binary Classification Problem `** using machine learning techniques.  
 This project includes:
 - A **[Jupyter Notebook](https://github.com/mazen-alasas/Bank-Customer-Churn-ML/blob/main/notebooks/training.ipynb)** for data analysis and modeling.
-- An interactive **[Streamlit Web App]()** for deployment.
+- An interactive **[Streamlit Web App](https://bank-customer-churn-ml-ffdj7crpkwfurdxxsgarjk.streamlit.app/)** for deployment.
 
 ---
 
